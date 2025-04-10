@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Academy - Catálogo de Códigos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="importmap">
+    {
+        "imports": {
+            "highlight.js": "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/es/highlight.min.js"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code Academy</h1>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Pesquisar código...">
+                <button onclick="searchCode()">Buscar</button>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="category-menu">
+                <li><a href="#" data-category="html">HTML</a></li>
+                <li><a href="#" data-category="javascript">JavaScript</a></li>
+                <li><a href="#" data-category="css">CSS</a></li>
+                <li><a href="#" data-category="php">PHP</a></li>
+                <li><a href="#" data-category="twig">Twig</a></li>
+            </ul>
+        </nav>
+
+        <main id="codeList">
+            <!-- Códigos serão carregados dinamicamente -->
+        </main>
+
+        <div id="codeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <pre><code id="modalCode"></code></pre>
+                <p id="modalDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
